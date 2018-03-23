@@ -10,5 +10,5 @@ docker run vranac/erd
 Or for a quick example from the repo
 ```bash
 curl 'https://raw.githubusercontent.com/BurntSushi/erd/master/examples/simple.er' > simple.er
-docker run --rm -v "$(pwd)":/erd erd -i simple.er -o simple.pdf
+docker run --rm -v "$(pwd)":/erd vranac/erd -i simple.er -o simple.pdf
 ```
