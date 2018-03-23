@@ -1,4 +1,4 @@
-FROM haskell:8
+FROM haskell:8.2
 
 LABEL maintainer Srdjan Vranac <vranac@gmail.com>
 
@@ -9,6 +9,8 @@ RUN apt-get update \
     && rm -f /var/cache/apt/*.bin \
     && cabal update \
     && cabal install 'graphviz ==2999.*' 'parsec ==3.1.*' erd --allow-newer
+
+WORKDIR /erd
 
 ENTRYPOINT ["erd"]
 CMD ["-h"]
