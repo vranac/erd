@@ -29,4 +29,3 @@ RUN apt-get update \
 WORKDIR /erd
 
 ENTRYPOINT ["erd"]
-CMD ["-h"]
